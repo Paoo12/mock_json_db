@@ -6,7 +6,7 @@ require('dotenv').config();
 PORT = process.env.PORT || 8000;
 
 //setting up view engine
-app.set("view engines", "ejs");
+app.set("view engine", "ejs");
 app.set("views", "./views");
 
 //using express routers to organize routes
