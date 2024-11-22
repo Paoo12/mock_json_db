@@ -14,7 +14,7 @@ async function readData() {
 
 async function writeData(data) {
     try {
-        await fs.writeFile(filePath, data);
+        await fs.writeFile(filePath, JSON.stringify(data, null, 2 /* 2 represents indentation on the JSON */));
     } catch (error) {
         throw new Error('Internal Server Error');
     }
