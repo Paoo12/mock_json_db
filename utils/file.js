@@ -1,7 +1,5 @@
-const { throws } = require('assert');
-
 const fs = require('fs').promises;
-const filePath = "./database.json";
+const filePath = './database.json';
 
 async function readData() {
     try {
@@ -14,12 +12,10 @@ async function readData() {
 
 async function writeData(data) {
     try {
-        await fs.writeFile(filePath, JSON.stringify(data, null, 2 /* 2 represents indentation on the JSON */));
+        await fs.writeFile(filePath, JSON.stringify(data, null, 2));
     } catch (error) {
         throw new Error('Internal Server Error');
     }
 }
 
-module.exports = { readData, writeData };
-
-
+module.exports = { readData, writeData }; 
